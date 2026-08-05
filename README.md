@@ -1,43 +1,135 @@
-Add files via upload
-AI-Powered Resume Screening System
-An AI-powered recruitment tool that analyzes candidate resumes, compares them with recruiter-defined job requirements, calculates a job-matching score, and provides clear shortlisting or rejection reasons.
+# 🤖 AI-Powered Resume Screening System
 
-The project uses Python and Groq LLM to automate the initial resume-screening process.
+> An intelligent AI-based recruitment tool that automates resume screening using the **Groq API**. The system extracts information from PDF and DOCX resumes, compares candidate profiles with recruiter-defined job requirements, calculates an ATS-style matching score, and provides transparent hiring recommendations.
 
-Features
-Extracts information from PDF and DOCX resumes
-Identifies candidate skills, education, experience, and projects
-Accepts recruiter-defined job requirements
-Compares candidate skills with the required skills
-Calculates a matching score from 0% to 100%
-Recommends candidates scoring 80% or higher
-Sends candidates scoring 70% to 79% for manual review
-Rejects candidates scoring below 70%
-Explains missing skills and reasons for rejection
-Produces structured results using Pydantic and JSON
-Candidate Selection Criteria
-Matching Score	Result
-80%–100%	Shortlisted for Interview
-70%–79%	Manual Recruiter Review
-Below 70%	Rejected
-Matching Criteria
-Category	Weight
-Required Skills	40%
-Relevant Experience	25%
-Projects	15%
-Education	10%
-Tools and Certifications	10%
-Technologies Used
-Python
-Groq API
-Large Language Models
-Pydantic
-PDFPlumber
-python-docx
-JSON
-Regular Expressions
-Prompt Engineering
-Natural Language Processing
-Project Structure
-text resume-screening-system/ ├── app.py ├── resume_parser.py ├── matcher.py ├── models.py ├── requirements.txt ├── .env.example ├── .gitignore ├── resumes/ └── README.md
-main
+---
+
+## 📌 Features
+
+- 📄 Extracts data from **PDF** and **DOCX** resumes
+- 🧠 AI-powered resume analysis using **Groq LLM**
+- 🎯 Matches resumes against recruiter-defined job requirements
+- 📊 Calculates a **0–100% job matching score**
+- 💼 Extracts:
+  - Skills
+  - Education
+  - Experience
+  - Projects
+  - Certifications
+- ✅ Shortlists qualified candidates
+- ⚠️ Flags borderline candidates for manual review
+- ❌ Rejects unsuitable candidates with clear reasons
+- 📋 Identifies missing skills and qualification gaps
+- 📦 Returns structured JSON output using **Pydantic**
+
+---
+
+## 🎯 Candidate Selection Criteria
+
+| Matching Score | Decision |
+|---------------|----------|
+| **80% – 100%** | ✅ Shortlisted for Interview |
+| **70% – 79%** | ⚠️ Manual Recruiter Review |
+| **Below 70%** | ❌ Rejected |
+
+---
+
+## 📊 Matching Criteria
+
+| Category | Weight |
+|----------|--------|
+| Required Skills | **40%** |
+| Relevant Experience | **25%** |
+| Projects | **15%** |
+| Education | **10%** |
+| Tools & Certifications | **10%** |
+
+---
+
+## 🛠️ Tech Stack
+
+- 🐍 Python
+- ⚡ Groq API (LLM)
+- 📄 PDFPlumber
+- 📃 python-docx
+- 📦 Pydantic
+- 🧩 JSON
+- 🔍 Regular Expressions (Regex)
+- ✍️ Prompt Engineering
+- 🤖 Natural Language Processing (NLP)
+
+---
+
+## 📁 Project Structure
+
+```text
+resume-screening-system/
+│
+├── app.py
+├── matcher.py
+├── resume_parser.py
+├── models.py
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── resumes/
+└── README.md
+```
+
+---
+
+## 🚀 How It Works
+
+1. Upload a candidate's resume (PDF/DOCX)
+2. Enter the job description or required skills
+3. AI extracts candidate information
+4. Resume is compared with job requirements
+5. Matching score is calculated
+6. System generates:
+   - ATS Match Score
+   - Hiring Decision
+   - Missing Skills
+   - Improvement Suggestions
+   - Structured JSON Output
+
+---
+
+## 📈 Sample Output
+
+```json
+{
+  "candidate_name": "John Doe",
+  "match_score": 86,
+  "decision": "Shortlisted",
+  "missing_skills": [
+    "Docker",
+    "AWS"
+  ],
+  "reason": "Strong technical skills and relevant project experience."
+}
+```
+
+---
+
+## 🔮 Future Improvements
+
+- Resume ranking dashboard
+- Multiple resume screening
+- Recruiter login system
+- Candidate database
+- Streamlit/Web interface
+- Email notifications
+- Export reports to PDF
+- Advanced ATS keyword analysis
+
+---
+
+## 👨‍💻 Author
+
+**Debesh Mandal**
+
+📧 Feel free to connect and contribute!
+
+---
+
+### ⭐ If you found this project useful, don't forget to Star the repository!
