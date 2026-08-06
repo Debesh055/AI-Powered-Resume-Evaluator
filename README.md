@@ -54,7 +54,6 @@
 - 📃 python-docx
 - 📦 Pydantic
 - 🧩 JSON
-- 🔍 Regular Expressions (Regex)
 - ✍️ Prompt Engineering
 - 🤖 Natural Language Processing (NLP)
 
@@ -65,7 +64,6 @@
 ```text
 resume-screening-system/
 │
-├── app.py
 ├── matcher.py
 ├── resume_parser.py
 ├── models.py
